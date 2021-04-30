@@ -10,7 +10,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-// app.use('/api', apiRoutes);
+app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
